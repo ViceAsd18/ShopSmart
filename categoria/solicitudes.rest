@@ -1,0 +1,28 @@
+### Obtener todas las categorías
+
+GET http://localhost:8080/api/v1/categorias
+Content-Type: application/json
+
+### Obtener categoría por ID
+
+GET http://localhost:8080/api/v1/categorias/1
+Content-Type: application/json
+
+### Crear una nueva categoría
+POST http://localhost:8080/api/v1/categorias
+Content-Type: application/json
+
+{
+"nombre_categoria": "Electrónica",
+"descripcion_categoria": "Productos electrónicos como celulares, notebooks y tablets"
+}
+
+### Crear otra categoría
+
+POST http://localhost:8080/api/v1/categorias
+Content-Type: application/json
+
+{
+"nombre_categoria": "Ropa",
+"descripcion_categoria": "Vestimenta para hombre y mujer"
+}
