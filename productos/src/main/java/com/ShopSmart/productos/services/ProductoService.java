@@ -44,15 +44,15 @@ public class ProductoService {
         productoNuevo.setPrecio(producto.getPrecio());
         productoNuevo.setId_categoria(producto.getId_categoria());
         productoNuevo.setId_inventario(producto.getId_inventario());
+        productoNuevo.setFecha_registro(java.time.LocalDateTime.now());
 
         return productoRepository.save(productoNuevo);
 
     }
 
+    public Producto actualizarProducto(Integer id_producto, ActualizarProducto producto){
 
-    public Producto actualizarProducto(ActualizarProducto producto){
-
-        Producto productoEncontrado = obtenerProductoPorId(producto.getId_producto());
+        Producto productoEncontrado = obtenerProductoPorId(id_producto);
 
         productoEncontrado.setNombre(producto.getNombre());
         productoEncontrado.setPrecio(producto.getPrecio());
