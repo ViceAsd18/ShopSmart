@@ -20,6 +20,16 @@
             "projectName": "inventario",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-CategoriaApplication<categoria>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ShopSmart.categoria.CategoriaApplication",
+            "projectName": "categoria",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }

@@ -11,7 +11,7 @@ Content-Type: application/json
 {
     "nombre": "Teclado mecanico",
     "precio": 50.49,
-    "id_categoria": 2
+    "id_categoria": 3
 }
 
 ### Obtener un producto por ID
