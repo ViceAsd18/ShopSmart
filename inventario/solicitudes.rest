@@ -1,11 +1,11 @@
 // Los datos son simulados por lo tanto no se valida que el producto exista en el MS productos.
 
 ### Obtener todos los inventarios
-GET http://localhost:8080/api/v1/inventarios
+GET http://localhost:8081/api/v1/inventarios
 Accept: application/json
 
 ### Agregar un nuevo producto al inventario 
-POST http://localhost:8080/api/v1/inventarios
+POST http://localhost:8081/api/v1/inventarios
 Content-Type: application/json
 
 {
@@ -14,7 +14,7 @@ Content-Type: application/json
 }
 
 ### Agregar el mismo producto
-POST http://localhost:8080/api/v1/inventarios
+POST http://localhost:8081/api/v1/inventarios
 Content-Type: application/json
 
 {
@@ -23,15 +23,15 @@ Content-Type: application/json
 }
 
 ### Agregar stock invalido
-POST http://localhost:8080/api/v1/inventarios
+POST http://localhost:8081/api/v1/inventarios
 Content-Type: application/json
 
 {
-    "id_producto": 2,
+    "id_producto": 1,
     "stock": -10
 }
 
 
 ### Obtener inventario por id
-GET http://localhost:8080/api/v1/inventarios/1
+GET http://localhost:8081/api/v1/inventarios/1
 Accept: application/json

@@ -31,31 +31,16 @@ public class InventarioController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> obtenerPorId(@PathVariable Integer id) {
-        
-        try {
-
-            return ResponseEntity.ok(inventarioService.obtenerInventarioPorId(id));
-
-        } catch (RuntimeException e) {
-
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
-        }
+    public ResponseEntity<Inventario> obtenerPorId(@PathVariable Integer id) {
+        return ResponseEntity.ok(inventarioService.obtenerInventarioPorId(id));
     }
 
     @PostMapping
-    public ResponseEntity<?> crear(@Valid @RequestBody AgregarInventario request) {
-        
-        try {
+    public ResponseEntity<Inventario> agregarInventario(@Valid @RequestBody AgregarInventario inventario) {
 
-            Inventario nuevo = inventarioService.agregarInventario(request);
-            return ResponseEntity.status(HttpStatus.CREATED).body(nuevo);
+        Inventario nuevoInventario = inventarioService.agregarInventario(inventario);
 
-        } catch (RuntimeException e) {
-            //Lanzar error en caso de que el producto ya exista
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
-            
-        }
+        return ResponseEntity.status(HttpStatus.CREATED).body(nuevoInventario);
     }
 
 }
