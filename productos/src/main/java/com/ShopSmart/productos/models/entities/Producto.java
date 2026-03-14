@@ -29,9 +29,6 @@ public class Producto {
     private LocalDateTime fecha_registro;
 
     @Column(nullable = false)
-    private Integer id_inventario;
-
-    @Column(nullable = false)
     private Integer id_categoria;
 
 }

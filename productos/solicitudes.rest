@@ -11,26 +11,24 @@ Content-Type: application/json
 {
     "nombre": "Teclado mecanico",
     "precio": 50.49,
-    "id_inventario": 3,
     "id_categoria": 2
 }
 
 ### Obtener un producto por ID
-GET http://localhost:8080/api/v1/productos/3
+GET http://localhost:8080/api/v1/productos/1
 Content-Type: application/json
 
 ### Actualizar un producto con ID
-PUT http://localhost:8080/api/v1/productos/3
+PUT http://localhost:8080/api/v1/productos/1
 Content-Type: application/json
 
 {
     "nombre": "Teclado Gamer RGB",
     "precio": 59.90,
-    "id_inventario": 1,
     "id_categoria": 5
 }
 
 ### Eliminar un producto por ID
-DELETE http://localhost:8080/api/v1/productos/3
+DELETE http://localhost:8080/api/v1/productos/1
 Content-Type: : application/json
 

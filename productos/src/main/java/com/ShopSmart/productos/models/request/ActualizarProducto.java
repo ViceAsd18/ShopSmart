@@ -16,8 +16,5 @@ public class ActualizarProducto {
     private Double precio;
 
     @Column(nullable = false)
-    private Integer id_inventario;
-
-    @Column(nullable = false)
     private Integer id_categoria;
 }

@@ -43,7 +43,6 @@ public class ProductoService {
         productoNuevo.setNombre(producto.getNombre());
         productoNuevo.setPrecio(producto.getPrecio());
         productoNuevo.setId_categoria(producto.getId_categoria());
-        productoNuevo.setId_inventario(producto.getId_inventario());
         productoNuevo.setFecha_registro(java.time.LocalDateTime.now());
 
         return productoRepository.save(productoNuevo);
@@ -57,7 +56,6 @@ public class ProductoService {
         productoEncontrado.setNombre(producto.getNombre());
         productoEncontrado.setPrecio(producto.getPrecio());
         productoEncontrado.setId_categoria(producto.getId_categoria());
-        productoEncontrado.setId_inventario(producto.getId_inventario());
 
         return productoRepository.save(productoEncontrado);
     }
