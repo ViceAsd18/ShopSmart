@@ -1,0 +1,48 @@
+### Obtener todos los clientes
+GET http://localhost:8083/api/v1/clientes
+Content-Type: application/json
+
+
+
+### Crear cliente
+POST http://localhost:8083/api/v1/clientes
+Content-Type: application/json
+
+{
+  "pnombre_cli": "Samuel",
+  "snombre_cli": "Andres",
+  "apaterno_cli": "Soto",
+  "amaterno_cli": "Perez",
+  "run_cli": "12345679-9",
+  "email_cli": "samuel@gmail.com",
+  "telefono_cli": "962345678",
+  "contrasena": "12345678"
+}
+
+
+
+### Obtener cliente por ID
+GET http://localhost:8083/api/v1/clientes/1
+Content-Type: application/json
+
+
+
+### Actualizar cliente
+PUT http://localhost:8083/api/v1/clientes/1
+Content-Type: application/json
+
+{
+  "pnombre_cli": "Samuel",
+  "snombre_cli": "Andres",
+  "apaterno_cli": "Soto",
+  "amaterno_cli": "Perez",
+  "email_cli": "samuel_actualizado@gmail.com",
+  "telefono_cli": "987654321",
+  "contrasena": "nuevaclave123"
+}
+
+
+
+### Eliminar cliente
+DELETE http://localhost:8083/api/v1/clientes/1
+Content-Type: application/json
